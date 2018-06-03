@@ -1,3 +1,8 @@
+## Proof of Concept
+Getting geo-location to work in Vue 
+
+---
+
 ### References
 + https://www.npmjs.com/package/vue2-google-maps
 + https://alligator.io/vuejs/vue-google-maps/  
