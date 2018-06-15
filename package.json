@@ -8,13 +8,18 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1",
+    "express": "^4.16.3",
     "vue": "^2.5.16",
+    "vue-bulma-components": "^1.7.1",
     "vue2-google-maps": "^0.9.7"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
     "@vue/cli-service": "^3.0.0-beta.15",
+    "nodemon": "^1.17.5",
     "vue-template-compiler": "^2.5.16"
   },
   "babel": {
