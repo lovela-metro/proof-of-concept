@@ -181,5 +181,50 @@ Vue side
     to use the rails backend API 
 	
 ---
-+ June 30th
 
+## June 30 2018
+
+### Add  Mongo Server
+
++ Linux - https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu/
++ Mac - $ `brew install mongodb` or $ `brew upgrade mongodb`
++ Windows - 
+
+Open on http://localhost:27017/
+
+## After you get mongodb installed  
++ start the mongodb server: $ `mongod`
++ open the command prompt: $ `mongo`
+
++ create a database: $ `use <dbname>`
+
+## Then you can insert records using `db` commands:
+
+### Example: The $ `db.stations.insertMany` plus the JSON block that follows
+
+```js
+db.stations.insertMany(
+[
+  {
+    "route_id": 801,
+    "lineName": "Blue Line",
+    "lineStation": "Anaheim Street Station",
+    "latitude": 33.7818299,
+    "longitude": -118.18938
+  },
+  {
+    "route_id": 801,
+    "lineName": "Blue Line",
+    "lineStation": "Pacific Coast Hwy Station",
+    "latitude": 33.7890899,
+    "longitude": -118.18938
+  }
+]);
+```
+
+### Additional helpful links
++ https://ademirgabardo.wordpress.com/2016/02/02/installing-and-running-mongodb-on-mac-osx-for-beginners/
+
++ https://www.tutorialspoint.com/mongodb/mongodb_query_document.htm
+
+---

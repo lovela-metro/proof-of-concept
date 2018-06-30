@@ -3,7 +3,6 @@ import App from './App.vue'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import vueBulmaComponents from 'vue-bulma-components'
 
-
 Vue.use(vueBulmaComponents)
 
 Vue.config.productionTip = false

@@ -1,19 +1,18 @@
 'use strict';
 module.exports = function(app) {
   var stationList = require('../controllers/stationListController');
-  
-  //CORS 
+
+  //CORS
   app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
   });
-  
+
   // todoList Routes
   app.route('/stations')
     .get(stationList.list_all_stations)
     .post(stationList.create_a_station);
-
 
   app.route('/stations/:routeID')
     .get(stationList.list_by_routeid)
