@@ -1,8 +1,9 @@
-Execute the below command on the schema stations 
-mongodb could be any name but Vue front end 
-will need a collection with the name stations to work 
-otherwise you will have to change several files 
++ Execute the below command `db.stations.insertMany` on the schema stations
++ mongodb can be called any name but `Vue front end`
++ will need a collection with the name `stations` to work
++ otherwise you will have to change several files
 
+```js
 db.stations.insertMany(
 [
   {
@@ -734,4 +735,5 @@ db.stations.insertMany(
     "longitude": -118.38899
   }
 ]
- ); 
+ );
+```
