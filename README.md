@@ -152,12 +152,9 @@ $ `npm run serve`
 
 ---
 
-### Next LoveLA meeting
-+ June 9th
-Some goals for Saturday 6/9/2018  meeting 
+## June 9 2018
 
-some ideas on how we can make the  
-traveling route to work  
+some ideas on how we can make the traveling route to work  
 http://geekonjava.blogspot.com/2016/05/demo-animated-moving-marker-on-google.html
 
 ## Rails back end 
@@ -183,22 +180,22 @@ Implement Axios ( http resources on the current code )
 
 ## June 30 2018
 
-### Add  Mongo Server
+## Add Mongo Server
 
 + Linux - https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu/
 + Mac - $ `brew install mongodb` or $ `brew upgrade mongodb`
 + Windows - 
 
-Open on http://localhost:27017/
+### Open on http://localhost:27017/
 
-## After you get mongodb installed  
+### After you get mongodb installed  
 + start the mongodb server: $ `mongod`
 + open the command prompt: $ `mongo`
 + create a database: $ `use <dbname>`
 
-## Then you can insert records using `db` commands:
+### Then you can insert records using `db` commands:
 
-### Example: The $ `db.stations.insertMany` plus the JSON block that follows
+**Example: The $ `db.stations.insertMany` plus the JSON block that follows**
 
 ```js
 db.stations.insertMany(
@@ -222,7 +219,10 @@ db.stations.insertMany(
 
 ### Additional helpful links
 + https://ademirgabardo.wordpress.com/2016/02/02/installing-and-running-mongodb-on-mac-osx-for-beginners/
-
 + https://www.tutorialspoint.com/mongodb/mongodb_query_document.htm
 
 ---
+
+## Next LoveLA meeting
++ July 7th ???  
+Marina Del Rey
