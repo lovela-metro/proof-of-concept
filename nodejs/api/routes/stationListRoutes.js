@@ -9,12 +9,12 @@ module.exports = function(app) {
   next();
   });
   
-  // todoList Routes
+  // Index
   app.route('/stations')
     .get(stationList.list_all_stations)
     .post(stationList.create_a_station);
 
-
+  // Show
   app.route('/stations/:routeID')
     .get(stationList.list_by_routeid)
     .put(stationList.update_a_station)
