@@ -1,6 +1,5 @@
 'use strict';
 
-
 var mongoose = require('mongoose'),
 Station = mongoose.model('Stations');
 
@@ -24,22 +23,18 @@ exports.list_by_routeid = function(req, res) {
     }
     //console.log('list by routeid call ',  req.params.routeID);
     console.log(station);
-
     res.json(station);
-  });  
+  });
 };
-
 
 exports.create_a_station = function(req, res) {
   var new_station = new Station(req.body);
   new_task.save(function(err, task) {
     if (err)
       res.send(err);
-    res.json(station);
+      res.json(station);
   });
 };
-
-
 
 exports.update_a_station = function(req, res) {
   Station.findOneAndUpdate({_id: req.params.stationId}, req.body, {new: true}, function(err, task) {
@@ -49,12 +44,10 @@ exports.update_a_station = function(req, res) {
   });
 };
 
-
 exports.delete_a_station = function(req, res) {
 
-
-  Station.remove({
-    _id: req.params.stationId
+Station.remove({
+  _id: req.params.stationId
   }, function(err, station) {
     if (err)
       res.send(err);

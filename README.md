@@ -152,34 +152,77 @@ $ `npm run serve`
 
 ---
 
-### Next LoveLA meeting
-+ June 9th
-Some goals for Saturday 6/9/2018  meeting 
+## June 9 2018
 
-some ideas on how we can make the 
-traveling route to work 
+some ideas on how we can make the traveling route to work  
 http://geekonjava.blogspot.com/2016/05/demo-animated-moving-marker-on-google.html
 
-Rails back end 
+## Rails back end 
 
-1 - Create API Rest end point 
-    GET to retrieve GPS points to draw markers on Gmap vue 
-	json object should look like :
-	{position: {lat: 10.0, lng: 10.0}}
+1. Create API Rest end point 
+    `GET` to retrieve GPS points to draw markers on Gmap vue  
+	JSON Object should look like:  
+	`{position: {lat: 10.0, lng: 10.0}}`
 	
-2 - create on the db backend a table of gps points with lat and long entries 
+2. Create on the db backend a table of gps points with lat and long entries 
 
-3 - lets focus on one of the metro lines , maybe the red line ? 
-     - do we have a pic of every station along the route ? 
-     - do we have the gps locations of every station  ? 
-     - we will need a table on our end to keep that info 
+3. Let's focus on one of the metro lines , maybe the red line? 
+     - Do we have a pic of every station along the route? 
+     - Do we have the gps locations of every station? 
+     - We will need a table on our end to keep that info 
 	 
+## Vue side 
 
-Vue side 
-
-2 - Implement Axio ( http resources on the current code )
-    to use the rails backend API 
+Implement Axios ( http resources on the current code )  
+    to use the Rails backend API 
 	
 ---
-+ June 30th
 
+## June 30 2018
+
+## Add Mongo Server
+
++ Linux - https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu/
++ Mac - $ `brew install mongodb` or $ `brew upgrade mongodb`
++ Windows - 
+
+### Open on http://localhost:27017/
+
+### After you get mongodb installed  
++ start the mongodb server: $ `mongod`
++ open the command prompt: $ `mongo`
++ create a database: $ `use <dbname>`
+
+### Then you can insert records using `db` commands:
+
+**Example: The $ `db.stations.insertMany` plus the JSON block that follows**
+
+```js
+db.stations.insertMany(
+[
+  {
+    "route_id": 801,
+    "lineName": "Blue Line",
+    "lineStation": "Anaheim Street Station",
+    "latitude": 33.7818299,
+    "longitude": -118.18938
+  },
+  {
+    "route_id": 801,
+    "lineName": "Blue Line",
+    "lineStation": "Pacific Coast Hwy Station",
+    "latitude": 33.7890899,
+    "longitude": -118.18938
+  }
+]);
+```
+
+### Additional helpful links
++ https://ademirgabardo.wordpress.com/2016/02/02/installing-and-running-mongodb-on-mac-osx-for-beginners/
++ https://www.tutorialspoint.com/mongodb/mongodb_query_document.htm
+
+---
+
+## Next LoveLA meeting
++ July 7th ???  
+Marina Del Rey
