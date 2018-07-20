@@ -226,3 +226,32 @@ db.stations.insertMany(
 ## Next LoveLA meeting
 + July 7th ???  
 Marina Del Rey
+
+
+### Create a rails api 
++ rails new lovela --api --skip-active-record 
++ cd lovela 
+
+## Edit the Gemfile to include mongoid and bson_ext gems 
++ gem 'mongoid', '~> 6.0' 
++ gem 'bson_ext' 
++ bundle install 
+
+## Create the mongoid.yml file 
++ rails g mongoid:config 
+
+## Create the development database 
++ rails db:create 
+
+## Populate development database 
++ Use the mongo cli to populate the database 
+
+## Create scaffold 
++ rails g scaffold Station route_id: Integer lineName lineStation latitude longitude 
+# Note: I modified the model station.rb and removed the String datatype on latitude and longitude, this may not make a difference 
+
+## Verify the server will run 
++ rails s 
++ goto localhost:3000/stations 
+
+
