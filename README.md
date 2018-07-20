@@ -248,7 +248,7 @@ Marina Del Rey
 
 ## Create scaffold 
 + rails g scaffold Station route_id: Integer lineName lineStation latitude longitude 
-# Note: I modified the model station.rb and removed the String datatype on latitude and longitude, this may not make a difference 
+#### Note: I modified the model station.rb and removed the String datatype on latitude and longitude, this may not make a difference 
 
 ## Verify the server will run 
 + rails s 
