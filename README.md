@@ -183,19 +183,73 @@ Implement Axios ( http resources on the current code )
 ## Add Mongo Server
 
 + Linux - https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu/
-+ Mac - $ `brew install mongodb` or $ `brew upgrade mongodb`
+### Mac - $ `brew install mongodb` or $ `brew upgrade mongodb`
+```
+$ brew install mongodb
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 3 taps (heroku/brew, homebrew/core, homebrew/cask).
+==> New Formulae
+peru
+==> Updated Formulae
+git ✔                              geoipupdate                        node@8
+heroku/brew/heroku ✔               goreleaser                         pulumi
+heroku/brew/heroku-node ✔          gutenberg                          the_platinum_searcher
+openssl@1.1 ✔                      harfbuzz                           tor
+activemq                           hlint                              watchexec
+afflib                             homebank                           wireguard-tools
+chronograf                         mariadb@10.1                       wskdeploy
+folly                              mongodb@3.4                        zsh
+
+==> Installing dependencies for mongodb: gdbm
+==> Installing mongodb dependency: gdbm
+==> Downloading https://homebrew.bintray.com/bottles/gdbm-1.18.high_sierra.bottle.tar.gz
+######################################################################## 100.0%
+==> Pouring gdbm-1.18.high_sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/gdbm/1.18: 20 files, 584.4KB
+==> Installing mongodb
+==> Downloading https://homebrew.bintray.com/bottles/mongodb-4.0.2.high_sierra.bottle.tar.gz
+######################################################################## 100.0%
+==> Pouring mongodb-4.0.2.high_sierra.bottle.tar.gz
+==> Caveats
+To have launchd start mongodb now and restart at login:
+  brew services start mongodb
+Or, if you don't want/need a background service you can just run:
+  mongod --config /usr/local/etc/mongod.conf
+==> Summary
+🍺  /usr/local/Cellar/mongodb/4.0.2: 18 files, 256.6MB
+==> Caveats
+==> mongodb
+To have launchd start mongodb now and restart at login:
+  brew services start mongodb
+Or, if you don't want/need a background service you can just run:
+  mongod --config /usr/local/etc/mongod.conf
+  
+
+$ brew services start mongodb
+==> Successfully started `mongodb` (label: homebrew.mxcl.mongodb)
+```
+
 + Windows - 
 
-### Open on http://localhost:27017/
+
+### Open on [http://localhost:27017/](http://localhost:27017/)
+
+```
+It looks like you are trying to access MongoDB over HTTP on the native driver port.
+```
 
 ### After you get mongodb installed  
 + start the mongodb server: $ `mongod`
 + open the command prompt: $ `mongo`
 + create a database: $ `use <dbname>`
-
+```
+> use stations
+switched to db stations
+```
 ### Then you can insert records using `db` commands:
 
-**Example: The $ `db.stations.insertMany` plus the JSON block that follows**
+**Example: The $ `db.stations.insertMany` plus the JSON block that follows** (It automatically saves.)
 
 ```js
 db.stations.insertMany(
@@ -215,6 +269,27 @@ db.stations.insertMany(
     "longitude": -118.18938
   }
 ]);
+
+```
+### Print out the staions in the terminal
+```
+> db.stations.find().pretty()
+{
+	"_id" : ObjectId("5b97f18ddd1f8b7076ec271d"),
+	"route_id" : 801,
+	"lineName" : "Blue Line",
+	"lineStation" : "Anaheim Street Station",
+	"latitude" : 33.7818299,
+	"longitude" : -118.18938
+}
+{
+	"_id" : ObjectId("5b97f18ddd1f8b7076ec271e"),
+	"route_id" : 801,
+	"lineName" : "Blue Line",
+	"lineStation" : "Pacific Coast Hwy Station",
+	"latitude" : 33.7890899,
+	"longitude" : -118.18938
+}
 ```
 
 ### Additional helpful links
